@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+    <title><< Sucasa DJ >></title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico"/>
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet"/>
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <!--Modal-->
+    <link ref="stylesheet" href="modal.css">
+    <script src="js/scripts.js"></script>
+</head>
+<body>
+    <div class="container-fluid text-center">
+        <header>
+            <h1 class="site-heading text-center text-faded d-none d-lg-block">
+                <span class="site-heading-upper text-primary mb-3">Música Eletrônica e Cultura DJ</span><br>
+                <span class="site-heading-lower">SUCASA DJ</span>
+            </h1>
+        </header>
+        <form th:action="@{/login}" method="post" style="max-width: 350px; margin: 0 auto;">
+
+            <div th:if="${registerOk}">
+                <p class="text-warning">Cadastro criado.</p>
+            </div>
+
+            <div class="border border-secondary p-3 rounded">
+                <p>
+                    <input type="email" name="login" class="form-control" placeholder="E-mail" required autofocus/>
+                </p>
+                <p>
+                    <input type="password" name="password" class="form-control" placeholder="Senha" required />
+                </p>
+                <p>
+                    <input type="submit" value="Entrar" class="btn btn-primary" />
+                </p>
+            </div>
+        </form>
+        <p class="my-5"><a href="/signup" class="btn btn-primary">Cadastrar</a></p>
+    </div>
+</body>
+</html>
